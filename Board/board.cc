@@ -11,6 +11,8 @@ void Board::initStandardChess() {}
 Colour Board::getTurn() const {}
 Coord Board::getSize() const {}
 Piece* Board::getPiece(Coord) const {}
+Piece* Board::getFirst2PawnW() const {}
+Piece* Board::getFirst2PawnB() const {}
 
 // set functions
 bool Board::setPiece(Coord t, PieceName p, Colour c) {}
@@ -39,11 +41,11 @@ bool Board::isBlocked(Coord f, Coord t) const
     switch (dir)
     {
     case DIR::N:
-        for (int i = 1; f.r + i < t.r; i++) 
+        for (int i = 1; f.r + i < t.r; i++)
             if (!board[f.r + i][f.c]->getPiece()) return false;
         break;
     case DIR::S:
-        for (int i = -1; f.r + i > t.r; i--) 
+        for (int i = -1; f.r + i > t.r; i--)
             if (!board[f.r + i][f.c]->getPiece()) return false;
         break;
     case DIR::E:

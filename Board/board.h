@@ -49,6 +49,8 @@ public:
     Colour getTurn() const;
     Coord getSize() const;
     Piece* getPiece(Coord) const;
+    Piece* getFirst2PawnW() const;
+    Piece* getFirst2PawnB() const;
 
     bool setPiece(Coord t, PieceName p, Colour c);
     void setPlayerW(Player*);
