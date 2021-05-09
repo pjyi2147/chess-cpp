@@ -13,7 +13,7 @@ OBJ_FILES = ${patsubst %.cc, $(OBJ_DIR)/%.o, $(SRC_FILES)}
 INC_DIRS = include/ncurses
 
 #LIB_DIRS = 
-#LIB = 
+LIB = -libncurses
 
 EXEC=chess
 
