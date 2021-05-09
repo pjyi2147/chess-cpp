@@ -48,7 +48,7 @@ bool Piece::isValidMove(Coord to) const
 
     // what else?
     
-    // upto here it is valid
+    // if passes all then it is valid
     return true;
 }
 

@@ -11,6 +11,7 @@ protected:
     Colour colour;
     Cell* cell;
     int moveCount;
+    
 public:
     Piece(Coord, Colour, Cell*);
     virtual ~Piece();

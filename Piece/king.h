@@ -7,10 +7,10 @@ class King : public Piece
 private:
 
 public:
-    King();
+    King(Coord, Colour, Cell*);
     ~King();
 
-    virtual void getPieceName() const override;
+    virtual PieceName getPieceName() const override;
     bool isValidMove(Coord to) const;
 };
 
