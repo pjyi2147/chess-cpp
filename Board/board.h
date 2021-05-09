@@ -2,11 +2,11 @@
 #define BOARD_H_
 #include <vector>
 #include <memory>
-#include "../Observer/subject.h"
 #include "../enum.h"
+#include "../Observer/subject.h"
+#include "../Piece/piece.h"
 
 class Cell;
-class Piece;
 class Player;
 
 class Board : public Subject<Move>

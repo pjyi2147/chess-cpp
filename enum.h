@@ -43,8 +43,11 @@ DIR getDIR(Coord f, Coord t)
     if (f.r > t.r && f.c < t.c) return DIR::SE;
     if (f.r > t.r && f.c > t.c) return DIR::SW;
     if (f.r < t.r && f.c > t.c) return DIR::NW;
+
+    return DIR::NA;
 }
 
+class Piece;
 struct Move
 {
     Piece* origin;
