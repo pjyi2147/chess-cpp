@@ -25,10 +25,10 @@ clean:
 	rm -fr build
 
 $(OBJ_DIR)/$(EXEC): $(OBJ_FILES)
-	$(CXX) $(CXXFLAGS) $(OBJ_FILES) -o $(OBJ_DIR)/$(EXEC)
+	$(CXX) $(CXXFLAGS) $(OBJ_FILES) -o $(OBJ_DIR)/$(EXEC) -I $(INC_DIRS)
 
 build/%.o: %.cc
 	mkdir -p $(shell dirname $@)
-	$(CXX) -c -o $@ $< $(CXXFLAGS)
+	$(CXX) -c -o $@ $< $(CXXFLAGS) -I $(INC_DIRS)
 
 -include $(OBJ_FILES:.o=.d)
