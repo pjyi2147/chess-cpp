@@ -21,7 +21,7 @@ class Observer;
 
 template <typename StateType>
 class Subject {
-    std::vector<Observer<InfoType, StateType> *> observers;
+    std::vector<Observer<StateType> *> observers;
     StateType state;
 
 protected:
@@ -30,7 +30,6 @@ protected:
 public:
     void attach(Observer<StateType> *o);
     void notifyObservers();
-    virtual InfoType getInfo() const = 0;
     StateType getState() const;
 };
 
