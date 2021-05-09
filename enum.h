@@ -27,7 +27,7 @@ enum class DIR { N=0, NE, E, SE, S, SW, W, NW, POS, NA };
 enum class PieceName { K, Q, N, B, R, P };
 enum class MoveType { Move, Castle, Enpassant, Capture, Promotion, Undo, UCapture, UPromotion};
 
-// returns dir from f to t
+// returns DIR from f to t
 DIR getDIR(Coord f, Coord t)
 {
     if (f == t) return DIR::POS;
