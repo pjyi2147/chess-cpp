@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 
+// {r, c}
 struct Coord
 {
     int r;
