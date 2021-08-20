@@ -14,7 +14,8 @@ bool Queen::isValidMove(Coord to) const
 {
     // check basics 
     if (!Piece::isValidMove(to)) return false;
-
+    auto pos = cell->getPos();
+    
     DIR dir = getDIR(pos, to);
     // any dir other than NA is good
     return dir != DIR::NA;

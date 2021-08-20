@@ -1,7 +1,5 @@
 #include "king.h"
-#include "../Board/cell.h"
 #include "../Board/board.h"
-
 
 King::King(Coord p, Colour c, Cell* ce)
 : Piece(p, c, ce) {}
@@ -17,7 +15,7 @@ bool King::isValidMove(Coord to) const
 {
     // check basics 
     if (!Piece::isValidMove(to)) return false;
-    
+    auto pos = cell->getPos();
     // 2 things to check: original move & castling
     // 1. original move
     if (abs(pos.r - to.r) <= 1 && abs(pos.c - to.c) <= 1) return true;

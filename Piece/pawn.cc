@@ -1,5 +1,4 @@
 #include "pawn.h"
-#include "../Board/cell.h"
 #include "../Board/board.h"
 
 Pawn::Pawn(Coord p, Colour c, Cell* ce)
@@ -16,7 +15,7 @@ bool Pawn::isValidMove(Coord to) const
 {
     // check basics 
     if (!Piece::isValidMove(to)) return false;
-
+    auto pos = cell->getPos();
     // 2 cases
     DIR dir = getDIR(pos, to);
     // 1. forward

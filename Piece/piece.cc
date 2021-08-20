@@ -1,30 +1,25 @@
 #include "piece.h"
-#include "Board/cell.h"
-#include "Board/board.h"
+#include "../Board/cell.h"
+#include "../Board/board.h"
 
-Piece::Piece(Coord p, Colour c, Cell* ce) 
-: pos{p}, colour{c}, cell{ce}, moveCount{0} {}
+Piece::Piece(Colour c, Cell* ce) 
+: colour{c}, cell{ce}, moveCount{0} {}
 
 Colour Piece::getColour() const
 {
     return colour;
 }
 
-Coord Piece::getPostion() const
+void Piece::setCell(Cell* c)
 {
-    return pos;
+    cell = c;
 }
-
-void Piece::setPosition(Coord c)
-{
-    pos = c;
-}
-
 bool Piece::isValidMove(Coord to) const
 {
     // not connected to any cell
     if (!cell) return false;
-
+    Coord pos = cell->getPos();
+    
     // is the same location?
     if (pos == to) return false;
 
@@ -43,7 +38,6 @@ bool Piece::isValidMove(Coord to) const
     if (!topiece || colour == topiece->getColour()) return false;
 
     // check blockage
-    DIR d = getDIR(pos, to);
     if (!cell->getBoard()->isBlocked(pos, to)) return false;
 
     // what else?
