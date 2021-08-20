@@ -23,9 +23,15 @@ public:
     void setPiece(Piece* p);
 
     Piece* getPiece() const;
-    std::vector<Piece*>& getAccessW() const;
-    std::vector<Piece*>& getAccessB() const;
+    const std::vector<Piece*>& getAccessW() const;
+    const std::vector<Piece*>& getAccessB() const;
     Board* getBoard() const;
+    Coord getPos() const;
+
+    void clearAccess();
+
+    void pushAccessW(Piece* p);
+    void pushAccessB(Piece* p);
 };
 
 #endif /* CELL_H_ */
