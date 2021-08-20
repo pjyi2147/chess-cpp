@@ -7,7 +7,7 @@ class Queen : public Piece
 private:
 
 public:
-    Queen(Coord, Colour, Cell*);
+    Queen(Colour, Cell*);
     ~Queen();
 
     virtual PieceName getPieceName() const override;

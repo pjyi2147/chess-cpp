@@ -1,8 +1,8 @@
 #include "pawn.h"
 #include "../Board/board.h"
 
-Pawn::Pawn(Coord p, Colour c, Cell* ce)
-: Piece(p, c, ce) {}
+Pawn::Pawn(Colour c, Cell* ce)
+: Piece(c, ce) {}
 
 Pawn::~Pawn() {}
 

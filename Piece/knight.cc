@@ -1,7 +1,7 @@
 #include "knight.h"
 
-Knight::Knight(Coord p, Colour c, Cell* ce)
-: Piece(p, c, ce) {}
+Knight::Knight(Colour c, Cell* ce)
+: Piece(c, ce) {}
 
 Knight::~Knight() {}
 

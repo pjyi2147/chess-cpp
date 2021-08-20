@@ -1,7 +1,7 @@
 #include "bishop.h"
 
-Bishop::Bishop(Coord p, Colour c, Cell* ce)
-: Piece(p, c, ce) {}
+Bishop::Bishop(Colour c, Cell* ce)
+: Piece(c, ce) {}
 
 Bishop::~Bishop() {}
 

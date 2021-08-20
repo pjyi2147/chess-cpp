@@ -1,7 +1,7 @@
 #include "queen.h"
 
-Queen::Queen(Coord p, Colour c, Cell* ce)
-: Piece(p, c, ce) {}
+Queen::Queen(Colour c, Cell* ce)
+: Piece(c, ce) {}
 
 Queen::~Queen() {}
 
@@ -15,7 +15,7 @@ bool Queen::isValidMove(Coord to) const
     // check basics 
     if (!Piece::isValidMove(to)) return false;
     auto pos = cell->getPos();
-    
+
     DIR dir = getDIR(pos, to);
     // any dir other than NA is good
     return dir != DIR::NA;

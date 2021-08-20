@@ -7,7 +7,7 @@ class Rook : public Piece
 private:
 
 public:
-    Rook(Coord, Colour, Cell*);
+    Rook(Colour, Cell*);
     ~Rook();
 
     virtual PieceName getPieceName() const override;

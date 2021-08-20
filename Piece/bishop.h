@@ -7,7 +7,7 @@ class Bishop : public Piece
 private:
 
 public:
-    Bishop(Coord, Colour, Cell*);
+    Bishop(Colour, Cell*);
     ~Bishop();
 
     virtual PieceName getPieceName() const override;

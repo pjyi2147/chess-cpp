@@ -7,7 +7,7 @@ class Pawn : public Piece
 private:
 
 public:
-    Pawn(Coord, Colour, Cell*);
+    Pawn(Colour, Cell*);
     ~Pawn();
 
     virtual PieceName getPieceName() const override;

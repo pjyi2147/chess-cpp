@@ -1,8 +1,8 @@
 #include "king.h"
 #include "../Board/board.h"
 
-King::King(Coord p, Colour c, Cell* ce)
-: Piece(p, c, ce) {}
+King::King(Colour c, Cell* ce)
+: Piece(c, ce) {}
 
 King::~King() {}
 

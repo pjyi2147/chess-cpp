@@ -7,7 +7,7 @@ class Knight : public Piece
 private:
 
 public:
-    Knight(Coord, Colour, Cell*);
+    Knight(Colour, Cell*);
     ~Knight();
 
     virtual PieceName getPieceName() const override;
